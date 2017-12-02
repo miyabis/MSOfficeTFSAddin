@@ -1,0 +1,158 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExcelTFSAddIn2010", "ExcelTFSAddIn\ExcelTFSAddIn2010.vbproj", "{608F2221-356A-4392-A039-EB9C9FB3E25C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TfCommand", "TfCommand\TfCommand.vbproj", "{63585353-83A9-4CA5-B307-C61D0048ACDC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TortoiseProcCommand", "TortoiseProcCommand\TortoiseProcCommand.vbproj", "{695A68A7-DF8A-40AD-8152-989B5DB84821}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PowerPointTFSAddIn2010", "PowerPointTFSAddIn\PowerPointTFSAddIn2010.vbproj", "{89439529-E161-4B08-93B0-2728B35E4317}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProjectTFSAddIn2010", "ProjectTFSAddIn\ProjectTFSAddIn2010.vbproj", "{3B544E7D-D4C5-4D55-9B08-0AE6574F0F0F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VisioTFSAddIn2010", "VisioTFSAddIn\VisioTFSAddIn2010.vbproj", "{31081ADE-A92C-4818-8D49-6DFC931B8AE9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WordTFSAddIn2010", "WordTFSAddIn\WordTFSAddIn2010.vbproj", "{C903EDF5-1F6A-4359-A35F-BD32A4EC174D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D07B9BB-9169-4252-A652-F9CD6CE3CD24}"
+	ProjectSection(SolutionItems) = preProject
+		Build2010.proj = Build2010.proj
+		README.ja.md = README.ja.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SetupProject", "SetupProject\SetupProject.wixproj", "{DCC876FD-A63E-4F8B-AF8B-247ED7B3D09A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{BA344261-9E85-47EC-AE6C-FD712D7E039C}"
+	ProjectSection(SolutionItems) = preProject
+		Images\Documentation_msofficetfsaddin.png = Images\Documentation_msofficetfsaddin.png
+		Images\Documentation_msofficetfsaddin2.png = Images\Documentation_msofficetfsaddin2.png
+		Images\Documentation_msofficetfsaddin_ja.png = Images\Documentation_msofficetfsaddin_ja.png
+		Images\Documentation_msofficetfsaddin_ja2.png = Images\Documentation_msofficetfsaddin_ja2.png
+		Images\Home_msofficetfsaddin_en.png = Images\Home_msofficetfsaddin_en.png
+		Images\Home_msofficetfsaddin_ja.png = Images\Home_msofficetfsaddin_ja.png
+		Images\Install_tfsaddin01.png = Images\Install_tfsaddin01.png
+		Images\Install_tfsaddin01_en.png = Images\Install_tfsaddin01_en.png
+		Images\Install_tfsaddin02.png = Images\Install_tfsaddin02.png
+		Images\Install_tfsaddin02_en.png = Images\Install_tfsaddin02_en.png
+		Images\Install_tfsaddin03.png = Images\Install_tfsaddin03.png
+		Images\Install_tfsaddin03_en.png = Images\Install_tfsaddin03_en.png
+		Images\Install_tfsaddin04.png = Images\Install_tfsaddin04.png
+		Images\Install_tfsaddin04_en.png = Images\Install_tfsaddin04_en.png
+		Images\Install_tfsaddin05.png = Images\Install_tfsaddin05.png
+		Images\Install_tfsaddin05_en.png = Images\Install_tfsaddin05_en.png
+		Images\Install_tfsaddin06.png = Images\Install_tfsaddin06.png
+		Images\Install_tfsaddin06_en.png = Images\Install_tfsaddin06_en.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{608F2221-356A-4392-A039-EB9C9FB3E25C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608F2221-356A-4392-A039-EB9C9FB3E25C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608F2221-356A-4392-A039-EB9C9FB3E25C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{608F2221-356A-4392-A039-EB9C9FB3E25C}.Debug|x86.Build.0 = Debug|Any CPU
+		{608F2221-356A-4392-A039-EB9C9FB3E25C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608F2221-356A-4392-A039-EB9C9FB3E25C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{608F2221-356A-4392-A039-EB9C9FB3E25C}.Release|x86.ActiveCfg = Release|Any CPU
+		{608F2221-356A-4392-A039-EB9C9FB3E25C}.Release|x86.Build.0 = Release|Any CPU
+		{63585353-83A9-4CA5-B307-C61D0048ACDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63585353-83A9-4CA5-B307-C61D0048ACDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63585353-83A9-4CA5-B307-C61D0048ACDC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{63585353-83A9-4CA5-B307-C61D0048ACDC}.Debug|x86.Build.0 = Debug|Any CPU
+		{63585353-83A9-4CA5-B307-C61D0048ACDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63585353-83A9-4CA5-B307-C61D0048ACDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63585353-83A9-4CA5-B307-C61D0048ACDC}.Release|x86.ActiveCfg = Release|Any CPU
+		{63585353-83A9-4CA5-B307-C61D0048ACDC}.Release|x86.Build.0 = Release|Any CPU
+		{695A68A7-DF8A-40AD-8152-989B5DB84821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{695A68A7-DF8A-40AD-8152-989B5DB84821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{695A68A7-DF8A-40AD-8152-989B5DB84821}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{695A68A7-DF8A-40AD-8152-989B5DB84821}.Debug|x86.Build.0 = Debug|Any CPU
+		{695A68A7-DF8A-40AD-8152-989B5DB84821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{695A68A7-DF8A-40AD-8152-989B5DB84821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{695A68A7-DF8A-40AD-8152-989B5DB84821}.Release|x86.ActiveCfg = Release|Any CPU
+		{695A68A7-DF8A-40AD-8152-989B5DB84821}.Release|x86.Build.0 = Release|Any CPU
+		{89439529-E161-4B08-93B0-2728B35E4317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89439529-E161-4B08-93B0-2728B35E4317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89439529-E161-4B08-93B0-2728B35E4317}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{89439529-E161-4B08-93B0-2728B35E4317}.Debug|x86.Build.0 = Debug|Any CPU
+		{89439529-E161-4B08-93B0-2728B35E4317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89439529-E161-4B08-93B0-2728B35E4317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89439529-E161-4B08-93B0-2728B35E4317}.Release|x86.ActiveCfg = Release|Any CPU
+		{89439529-E161-4B08-93B0-2728B35E4317}.Release|x86.Build.0 = Release|Any CPU
+		{3B544E7D-D4C5-4D55-9B08-0AE6574F0F0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B544E7D-D4C5-4D55-9B08-0AE6574F0F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B544E7D-D4C5-4D55-9B08-0AE6574F0F0F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3B544E7D-D4C5-4D55-9B08-0AE6574F0F0F}.Debug|x86.Build.0 = Debug|Any CPU
+		{3B544E7D-D4C5-4D55-9B08-0AE6574F0F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B544E7D-D4C5-4D55-9B08-0AE6574F0F0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B544E7D-D4C5-4D55-9B08-0AE6574F0F0F}.Release|x86.ActiveCfg = Release|Any CPU
+		{3B544E7D-D4C5-4D55-9B08-0AE6574F0F0F}.Release|x86.Build.0 = Release|Any CPU
+		{31081ADE-A92C-4818-8D49-6DFC931B8AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31081ADE-A92C-4818-8D49-6DFC931B8AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31081ADE-A92C-4818-8D49-6DFC931B8AE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{31081ADE-A92C-4818-8D49-6DFC931B8AE9}.Debug|x86.Build.0 = Debug|Any CPU
+		{31081ADE-A92C-4818-8D49-6DFC931B8AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31081ADE-A92C-4818-8D49-6DFC931B8AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31081ADE-A92C-4818-8D49-6DFC931B8AE9}.Release|x86.ActiveCfg = Release|Any CPU
+		{31081ADE-A92C-4818-8D49-6DFC931B8AE9}.Release|x86.Build.0 = Release|Any CPU
+		{C903EDF5-1F6A-4359-A35F-BD32A4EC174D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C903EDF5-1F6A-4359-A35F-BD32A4EC174D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C903EDF5-1F6A-4359-A35F-BD32A4EC174D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C903EDF5-1F6A-4359-A35F-BD32A4EC174D}.Debug|x86.Build.0 = Debug|Any CPU
+		{C903EDF5-1F6A-4359-A35F-BD32A4EC174D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C903EDF5-1F6A-4359-A35F-BD32A4EC174D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C903EDF5-1F6A-4359-A35F-BD32A4EC174D}.Release|x86.ActiveCfg = Release|Any CPU
+		{C903EDF5-1F6A-4359-A35F-BD32A4EC174D}.Release|x86.Build.0 = Release|Any CPU
+		{DCC876FD-A63E-4F8B-AF8B-247ED7B3D09A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{DCC876FD-A63E-4F8B-AF8B-247ED7B3D09A}.Debug|x86.ActiveCfg = Debug|x86
+		{DCC876FD-A63E-4F8B-AF8B-247ED7B3D09A}.Debug|x86.Build.0 = Debug|x86
+		{DCC876FD-A63E-4F8B-AF8B-247ED7B3D09A}.Release|Any CPU.ActiveCfg = Release|x86
+		{DCC876FD-A63E-4F8B-AF8B-247ED7B3D09A}.Release|x86.ActiveCfg = Release|x86
+		{DCC876FD-A63E-4F8B-AF8B-247ED7B3D09A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA344261-9E85-47EC-AE6C-FD712D7E039C} = {3D07B9BB-9169-4252-A652-F9CD6CE3CD24}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs31
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TfCommand\\TfCommand.vbproj
+		SccProjectName1 = TfCommand
+		SccLocalPath1 = TfCommand
+		SccProjectUniqueName2 = TortoiseProcCommand\\TortoiseProcCommand.vbproj
+		SccProjectName2 = TortoiseProcCommand
+		SccLocalPath2 = TortoiseProcCommand
+		SccProjectUniqueName3 = ExcelTFSAddIn\\ExcelTFSAddIn2010.vbproj
+		SccProjectName3 = ExcelTFSAddIn
+		SccLocalPath3 = ExcelTFSAddIn
+		SccProjectUniqueName4 = PowerPointTFSAddIn\\PowerPointTFSAddIn2010.vbproj
+		SccProjectName4 = PowerPointTFSAddIn
+		SccLocalPath4 = PowerPointTFSAddIn
+		SccProjectUniqueName5 = ProjectTFSAddIn\\ProjectTFSAddIn2010.vbproj
+		SccProjectName5 = ProjectTFSAddIn
+		SccLocalPath5 = ProjectTFSAddIn
+		SccProjectUniqueName6 = VisioTFSAddIn\\VisioTFSAddIn2010.vbproj
+		SccProjectName6 = VisioTFSAddIn
+		SccLocalPath6 = VisioTFSAddIn
+		SccProjectUniqueName7 = WordTFSAddIn\\WordTFSAddIn2010.vbproj
+		SccProjectName7 = WordTFSAddIn
+		SccLocalPath7 = WordTFSAddIn
+		SccProjectUniqueName8 = SetupProject\\SetupProject.wixproj
+		SccProjectName8 = SetupProject
+		SccLocalPath8 = SetupProject
+	EndGlobalSection
+EndGlobal

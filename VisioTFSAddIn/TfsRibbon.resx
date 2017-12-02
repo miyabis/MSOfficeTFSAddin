@@ -1,0 +1,812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnVS.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAVdJREFUWEft
+        V8ENwjAQ6waMgJiAERiFLz/+fBiBERiBURiBERgBfJHFNcelSWhKhYQlq23snE9tk0L3x1TYrQ5n8M7j
+        msPfAUMfhjdwDy5pmwYI8MItL7S3BQqXhAdySjugaHG4kNNiQFiCF3DDoSLAXxUu5FQFBo/GtKc0CPiq
+        w4WcrvBMoNyNBS1vgPZRuJAlFJ6JlOXzto4xlgsf1FlG4Zl6lA1lS2tJ+Ik+TwsMhfowhlSAjOfC+416
+        eiAtCivimAuylLsUrR6jR6RF4Yk4L20i9Z543kBaFCkR17kmrqC7UowvIi2KlIjr+RrAeekjkCbaPgIc
+        P3kJoyaMHpEWhTGkwmU819j4ZeiwdiM60udpgaFQH56JnHUr/urHaN7PsQDCfD9IxgJFq5rgtLZA4eIm
+        OKU9UDzXhKyq15KeBAjwmqh+t0YBYdKEbGAncNp/Qz+MrnsCb5ynGOXuCfwAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnVS.Label" xml:space="preserve">
+    <value>Visual Studio</value>
+  </data>
+  <data name="btnVS.ScreenTip" xml:space="preserve">
+    <value>Visual Studio Open</value>
+  </data>
+  <data name="&gt;&gt;btnVS.Name" xml:space="preserve">
+    <value>btnVS</value>
+  </data>
+  <data name="&gt;&gt;btnVS.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnVS.Parent" xml:space="preserve">
+    <value>groupExt</value>
+  </data>
+  <data name="&gt;&gt;btnVS.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnExplorer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAWpJREFUWEft
+        l81OwkAQx3kUH4lH4Dm86U0unj1x9OqJGBLxRki4SeJJaUAjGk1BJb2uM+vOug2z7dL90AQn+YXOtDP9
+        T5h2ty0hxK/CBlPCBlPSyIqi6AHCgwxoq3K7GSQeGIV86aiy7gZJsvu32Vjc9Q8bsby5IAGZKutmkKC7
+        z4ZdtrgrVEeV/jYItAH8f/QFHNT94+RcrFfvO2EVAE6HgnVQ9/nzgr1JFVUCZOcvt5f6oiqadI9QPidA
+        BsybVNGke4TyawVwySH4F/D3BNABsZ8CNh+5mA2O9ckQ2B5TOm8KuMYDXCDMAr4sxj1nAfIV/JkvSwVC
+        8Dqf1gtQT8AKnYfRWamAL9nVibOAU3R81ngbT9O+kwC9zocexvvBUWkgKV4SgAZOlGFEzIGkGCcg2jAi
+        NJDkbwlAg0CUYURoIMm3CYg2jAgOJP5aN6UQCLnldmF7Ww5BOYyR+fkw4T6XUsIGU8IG0yFaX3pSZP2/
+        SS2pAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnExplorer.Label" xml:space="preserve">
+    <value>Open in Explorer</value>
+  </data>
+  <data name="btnExplorer.ScreenTip" xml:space="preserve">
+    <value>open a folder in　Explorer</value>
+  </data>
+  <data name="&gt;&gt;btnExplorer.Name" xml:space="preserve">
+    <value>btnExplorer</value>
+  </data>
+  <data name="&gt;&gt;btnExplorer.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnExplorer.Parent" xml:space="preserve">
+    <value>groupExt</value>
+  </data>
+  <data name="&gt;&gt;btnExplorer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnWebAccess.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAgVJREFUWEftlz9KA0EUxnMDbyC5gJADeAMRUotFDuABLNMJ9lY2NgqCjSiI1YKV
+        hRDQQiOiBOOfoJgIknZ8v3He+ja7iRENY+GDD3ben+97OzM7u1sa1/r9fkVQFyQCNwTEyKmEsp+bkNUE
+        DUGR4ChQUws03zcpLgvSu33ovbnVk0c3v9dyU+tNV1o7zwAfMXLI1brAUQ6045kUVAVdCCBbPLzNCX4F
+        akwjcFUD/WiTRKbcF25fPBfe7bigFg7lgzvIFJskcOc+eSm5yxHObF25hYOWv57duXa97qsH1/iIkWNr
+        AFzKi0aQy5oEWHM/7YPi0xuXbr/55MVWju+9b/OskzbANT5ijMmlxnKYJtDI7wlx+g3HlNnCud0b1+p0
+        UzHukKnVsQIfMR1TQ63lMsuRBNkPE4dfdzaNXXMIrAikRX6gYrZZ6wdwm435uR9k4J9zu9uZwkEyppbY
+        8lE74wf4iOlSKeCwy4FGaKCh4pxwvjNNKiICw0TAqOY0pjCzUKEBjk5/gNikSQKt0EA93XycYkXJkwBa
+        oYGEBvzAbr7T9ktuGoHGi2JgVBxOjaOlumkDGhxGAH4rDv4b+HsNxNyE0R/D6AdR3KM4vA/ivYwwGcR4
+        HWe/jMQR74MEE2fcTzJMAvE+StUkId5nuZokxvsxUZOCeL9m1qQ4zs/poAnZBH7PS6V3qCaMd//rT44A
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnWebAccess.Label" xml:space="preserve">
+    <value>Web Access</value>
+  </data>
+  <data name="&gt;&gt;btnWebAccess.Name" xml:space="preserve">
+    <value>btnWebAccess</value>
+  </data>
+  <data name="&gt;&gt;btnWebAccess.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnWebAccess.Parent" xml:space="preserve">
+    <value>groupExt</value>
+  </data>
+  <data name="&gt;&gt;btnWebAccess.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupExt.Label" xml:space="preserve">
+    <value>Ext</value>
+  </data>
+  <data name="&gt;&gt;groupExt.Name" xml:space="preserve">
+    <value>groupExt</value>
+  </data>
+  <data name="&gt;&gt;groupExt.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.GroupView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;groupExt.Parent" xml:space="preserve">
+    <value>tabTfs</value>
+  </data>
+  <data name="&gt;&gt;groupExt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnScriptExport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAASxJREFUOE+dUcFKw0AU3D/yH3IK2JzMJ/QH1H/IHwgKosfgwZsHc7IievTkSQJF
+        e0hK1mxL6HqxPN+s2WXThhodGAKbmXnDewIgIqG1zpnkMcf7IEBoQ8Yn9yQOzun48ml4CAvHzCmTVitN
+        fwqB+Tkvae/o2pg2efXwipDbVr4NTIb58OKRZnNFhVy4Bvhyo18bGPG0qDHpE7U9M0kpqaqqDpVS0L6Y
+        YL/BvF6aBuDdZEJxHNNof0RRFDkGQWCYJIkJ2doBzPz2BfP724wWatmhDQBZ587nrmAJwaa5N8AHwtrA
+        nQHYgx3UWrsYEmCH9WJoQC9ghuDfDThA++eyLIuSPmRNYRhS0zTrXQGnWZZ1bm4Jc5qmWN5NrxnADxac
+        oQnDbbvlmmnMPwFCfAMjl0bqPNRqpgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnScriptExport.Label" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="&gt;&gt;btnScriptExport.Name" xml:space="preserve">
+    <value>btnScriptExport</value>
+  </data>
+  <data name="&gt;&gt;btnScriptExport.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnScriptExport.Parent" xml:space="preserve">
+    <value>groupVba</value>
+  </data>
+  <data name="&gt;&gt;btnScriptExport.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupVba.Label" xml:space="preserve">
+    <value>VBA</value>
+  </data>
+  <data name="&gt;&gt;groupVba.Name" xml:space="preserve">
+    <value>groupVba</value>
+  </data>
+  <data name="&gt;&gt;groupVba.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.GroupView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;groupVba.Parent" xml:space="preserve">
+    <value>tabTfs</value>
+  </data>
+  <data name="&gt;&gt;groupVba.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnGetItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAANxJREFUOE+lkcENwjAMRTsCozBD7z1xqsQwjMAASGySEz0zikFqew15kY3c0jYI
+        vmTFtf//jtNqjnEcpe/7fTqjD62J0tahAuGsDpcck1oJkI7nkEXe4F0rwYQIzMDybw3Ei70JPaWtwx5r
+        fgNq9JS2jWEYrlwXoYojNW1vI5HvIYTYtm2s6zoHOTV6SltGmnKC2DRN7G5dfMgzBzk1enCU/gn2ZJqJ
+        me5N6MFR+hQismNXL/K5fcNRyRRrBhZFA8D1/Ao+iiuAvx8RpAm//0YDU7hqirwz+fLkqnoB7wenzBdb
+        YBsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnGetItem.Label" xml:space="preserve">
+    <value>Get This Book</value>
+  </data>
+  <data name="&gt;&gt;btnGetItem.Name" xml:space="preserve">
+    <value>btnGetItem</value>
+  </data>
+  <data name="&gt;&gt;btnGetItem.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnGetItem.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnGetItem.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnGetItemFolder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAANxJREFUOE+lkcENwjAMRTsCozBD7z1xqsQwjMAASGySEz0zikFqew15kY3c0jYI
+        vmTFtf//jtNqjnEcpe/7fTqjD62J0tahAuGsDpcck1oJkI7nkEXe4F0rwYQIzMDybw3Ei70JPaWtwx5r
+        fgNq9JS2jWEYrlwXoYojNW1vI5HvIYTYtm2s6zoHOTV6SltGmnKC2DRN7G5dfMgzBzk1enCU/gn2ZJqJ
+        me5N6MFR+hQismNXL/K5fcNRyRRrBhZFA8D1/Ao+iiuAvx8RpAm//0YDU7hqirwz+fLkqnoB7wenzBdb
+        YBsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnGetItemFolder.Label" xml:space="preserve">
+    <value>Get This Folder</value>
+  </data>
+  <data name="&gt;&gt;btnGetItemFolder.Name" xml:space="preserve">
+    <value>btnGetItemFolder</value>
+  </data>
+  <data name="&gt;&gt;btnGetItemFolder.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnGetItemFolder.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnGetItemFolder.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnGetWorkspace.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAANxJREFUOE+lkcENwjAMRTsCozBD7z1xqsQwjMAASGySEz0zikFqew15kY3c0jYI
+        vmTFtf//jtNqjnEcpe/7fTqjD62J0tahAuGsDpcck1oJkI7nkEXe4F0rwYQIzMDybw3Ei70JPaWtwx5r
+        fgNq9JS2jWEYrlwXoYojNW1vI5HvIYTYtm2s6zoHOTV6SltGmnKC2DRN7G5dfMgzBzk1enCU/gn2ZJqJ
+        me5N6MFR+hQismNXL/K5fcNRyRRrBhZFA8D1/Ao+iiuAvx8RpAm//0YDU7hqirwz+fLkqnoB7wenzBdb
+        YBsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnGetWorkspace.Label" xml:space="preserve">
+    <value>Get Workspace</value>
+  </data>
+  <data name="&gt;&gt;btnGetWorkspace.Name" xml:space="preserve">
+    <value>btnGetWorkspace</value>
+  </data>
+  <data name="&gt;&gt;btnGetWorkspace.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnGetWorkspace.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnGetWorkspace.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Separator3.Name" xml:space="preserve">
+    <value>Separator3</value>
+  </data>
+  <data name="&gt;&gt;Separator3.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.SeparatorView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;Separator3.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;Separator3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnCheckOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAQVJREFUWEftlLENwjAQRb0BI7ACM2QFamqWoqJhFTagpKKmiJU25KL75mJdjMBn
+        0/hLX7Lj8/8PAXGahmEYS5kr0tIuWpkr0sJw13VmbgANoAE0gAbwE0AJc0Va2kUrc8V34stP7/1O7Ee3
+        PwWHZ5NojuaxzxbCKZTDVwFk+TxjIYSx3+EKgDwnc0SeEHa9PULwHK4DLOY4Ik8I2xzOy3AFgM5pLsxY
+        KIRNRRIiBkC5BOKIPIUwLgME9mRZTi4CIAvkOt7T2hpg/mXHn1IzneMronsckSf5305BxOV4cZnoE0TR
+        cmgNoko5FENsj5d65ZCEEK5TDkUQdcshKu37/v6Xchs59wJS8N7by9Fx6QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnCheckOut.Label" xml:space="preserve">
+    <value>Check Out</value>
+  </data>
+  <data name="&gt;&gt;btnCheckOut.Name" xml:space="preserve">
+    <value>btnCheckOut</value>
+  </data>
+  <data name="&gt;&gt;btnCheckOut.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnCheckOut.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnCheckOut.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAJ9JREFUOE+l
+        kjEOwjAMRXOoDsy5RTbu0k5cJ6cpDIwZoUtWg624+kpwGuBLT5Vc+/0lTpNzJqSMx8NHp8skfCXAVhQo
+        Zc0OHtYUyVllnxgR3EMI5L1v2AVKdSjEGGU5pUSYXaCpBdhk0QgQXJznhZ6PTb44bwT4E7muN6GeDwms
+        dqYr0FarnekKtNlqZ7oCptfOHAqOaAS/4N6P6g/IvQDWtjWmvtOxRgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnAdd.Label" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnRename.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAFBJREFUOE9joBh8+/btPz4MVYYbgBQ5OTmBMUwTMh+qDDegigHYNBKL4S6A0chs
+        YmjauYAQhqkbTi5A1ojMJ0QTNIAQRvECNgxNb4MWMDAAAPsOTf9dAGOQAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnRename.Label" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="&gt;&gt;btnRename.Name" xml:space="preserve">
+    <value>btnRename</value>
+  </data>
+  <data name="&gt;&gt;btnRename.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnRename.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnRename.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnUndo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAS9JREFUOE+FUzFqw0AQ1A/iH0QvMH6CPxAIpLXBnZsUJm36FKlci4DAYFwZt3aT
+        Jk1SBDWBtGmSFDHIldrNzHJ7SPJaHhix2tuZu1utEhFJiKqqBmAJCpiCee2dZMxcqgJAtXwgOfj5O5T9
+        u3Usvl++ycV4IcnNk5Ixc1xjfdtAKGbh7/4QY49hE5qkDQMruJyuYnz1sJXd+5eSseXDSXLXwJjtPuw6
+        tmNhJrwOc50G5Gj+bGI2+JonsTVqOg3qYjbsrIHDurgHdl5B6QF5nQ+eyHb3mugaIDdsi93P6AEFk/ZM
+        0IgDh7XmILWBgpknDjurmHANUJC/fn43xvhxU1BcgPE/II4MUMBul7fZSxSHgaK4F8oiTp1Au25jjJh/
+        4JGYcA0ICNh9FYeUCxFJ/gFsMD6DyEuDtQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnUndo.Label" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="&gt;&gt;btnUndo.Name" xml:space="preserve">
+    <value>btnUndo</value>
+  </data>
+  <data name="&gt;&gt;btnUndo.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnUndo.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnUndo.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Separator2.Name" xml:space="preserve">
+    <value>Separator2</value>
+  </data>
+  <data name="&gt;&gt;Separator2.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.SeparatorView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;Separator2.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;Separator2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnCheckIn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAQJJREFUWEftlD0OwjAMhXMDjsAVOEOvwMzMpZhYuAo3YGRiZmjUtdSWbblWWn7i
+        RAx50lPaJnnva6Um5CjGuOv7/g4jPaonKB2G4Tl5hLEqhCln14HQ5dfbY9weLzhWgbDlm8N5DPsTjsUh
+        lsrZRSHelReH+KScbSEoIk8UNiu3IHaO91BEniRMFcBb8j3Yfp1iAFyugbhQQ8geD3GYLsdwAwBmCFnj
+        IR3O1xieAADPID2kwyfjHwFeAJB5MEXkSQXivy3hCQB9ZuAaD1GYHCwSngCAeQ0B91+Lw0qYKtaV2uhl
+        qlgXL+66zs0NoAE0gAbQAH4CKGGqWFdqo5ep4l8UwgtNyd7bNJ8pwwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnCheckIn.Label" xml:space="preserve">
+    <value>Check In</value>
+  </data>
+  <data name="&gt;&gt;btnCheckIn.Name" xml:space="preserve">
+    <value>btnCheckIn</value>
+  </data>
+  <data name="&gt;&gt;btnCheckIn.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnCheckIn.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnCheckIn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnShelve.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIRJREFUOE+9
+        jtENgCAMRDuSM7CCvw7lAM7CSv4QftUjBStJi42JL7mUlt4BWaSUJohbHzDmnHfIHVLNyxoPyBUizTRv
+        Ra6Q3tyH8JrOtdQM0oxa7kZgiV9rAY/ZCCxVyYA205BLb8S2GwxDCEXoraoG8HGI+QNuVf75gVUhNcAj
+        tn2F6ARs4zfKCt5umgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnShelve.Label" xml:space="preserve">
+    <value>Shelve Pending</value>
+  </data>
+  <data name="&gt;&gt;btnShelve.Name" xml:space="preserve">
+    <value>btnShelve</value>
+  </data>
+  <data name="&gt;&gt;btnShelve.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnShelve.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnShelve.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnUnshelve.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAINJREFUOE+1
+        j8ENgCAMRRnJGVjBq0M5gLO4khfCVfNJq0XSVoy+pAFK3w+Ez8g57z1F2gWaMcZSOFurGkBbF/MFdFT5
+        /wXyr9qqBvQUaS3V0LiUqnoeGJrmtQk4ex4sQuAA3j8N2KQsQ3BHYzoppeEewjLuaMxGhnTLDIe8khmI
+        thzCARHNN8omm8wCAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnUnshelve.Label" xml:space="preserve">
+    <value>Unshelve Shelveset</value>
+  </data>
+  <data name="&gt;&gt;btnUnshelve.Name" xml:space="preserve">
+    <value>btnUnshelve</value>
+  </data>
+  <data name="&gt;&gt;btnUnshelve.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnUnshelve.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnUnshelve.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;Separator4.Name" xml:space="preserve">
+    <value>Separator4</value>
+  </data>
+  <data name="&gt;&gt;Separator4.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.SeparatorView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;Separator4.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;Separator4.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btnResolveByCopy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAF1JREFUOE+9zNEKwCAIhWGfzfd/l7UbbzcKHK7pwYQW/GQSH/UjIle1B2Dm5T5A
+        O850aQDt9wHZGQL6tvf8xwX0IwoCFtF53ukbApk5BGxo/w8Q5QKrvYBqA6gfohuQyL/8tkfddAAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="btnResolveByCopy.Label" xml:space="preserve">
+    <value>Resolve by Copy</value>
+  </data>
+  <data name="btnResolveByCopy.ScreenTip" xml:space="preserve">
+    <value>Resolve by Copy</value>
+  </data>
+  <data name="btnResolveByCopy.SuperTip" xml:space="preserve">
+    <value>Copy the local version , to resolve the conflict to get the server version</value>
+  </data>
+  <data name="&gt;&gt;btnResolveByCopy.Name" xml:space="preserve">
+    <value>btnResolveByCopy</value>
+  </data>
+  <data name="&gt;&gt;btnResolveByCopy.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnResolveByCopy.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnResolveByCopy.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="btnResolve.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAF1JREFUOE+9zNEKwCAIhWGfzfd/l7UbbzcKHK7pwYQW/GQSH/UjIle1B2Dm5T5A
+        O850aQDt9wHZGQL6tvf8xwX0IwoCFtF53ukbApk5BGxo/w8Q5QKrvYBqA6gfohuQyL/8tkfddAAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="btnResolve.Label" xml:space="preserve">
+    <value>Resolve</value>
+  </data>
+  <data name="&gt;&gt;btnResolve.Name" xml:space="preserve">
+    <value>btnResolve</value>
+  </data>
+  <data name="&gt;&gt;btnResolve.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnResolve.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnResolve.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;Separator1.Name" xml:space="preserve">
+    <value>Separator1</value>
+  </data>
+  <data name="&gt;&gt;Separator1.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.SeparatorView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;Separator1.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;Separator1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="btnHistory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        lxYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnHistory.Label" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="&gt;&gt;btnHistory.Name" xml:space="preserve">
+    <value>btnHistory</value>
+  </data>
+  <data name="&gt;&gt;btnHistory.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnHistory.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnHistory.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="btnDifference.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAQFJREFUOE+dkqsOwjAUhnkU1C6BkKF5hwkMUxgSFBaHRUwhpnAES8IjzE3hsSj0
+        HqH063aW3bosNPnTnu4/X8/pOrENx3GURblWUNrsA3OWZR3FcTwOIoCZt2hoNGQIUIeU9ubQH6YAoihS
+        ruspz/WV7847IDzWy1qfbuqYqkrEgHoBUhZKksSYt5dUBcuVMTMTsy+VdABC5hROlGQRMftShRVAzxgl
+        ruvw+JrvrP+ugIvFbwXQI73urq8Kwky8v79NUl0dAKKK9l8gmXlzfpL40SoeUR8AUQmgMAzltJzkGqR4
+        iTaASHrFTFIbUgGGhKestoI0AGNk+tVDrw2kkBP8ANrNscrtADpZAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnDifference.Label" xml:space="preserve">
+    <value>Compare</value>
+  </data>
+  <data name="&gt;&gt;btnDifference.Name" xml:space="preserve">
+    <value>btnDifference</value>
+  </data>
+  <data name="&gt;&gt;btnDifference.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnDifference.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnDifference.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="btnInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAANdJREFUOE+lk7ERwyAMRT2KR/AM9AxAl1GomMK9t/AKHoSCjlbRJ8DJseU4ie6+
+        Dwv+k4BjIKK/9PookXP2rMSiKoyRGzF/CeBF27qu5JwjY0zRPM8N8gBEBfCkh7kZoRCCNJdOrgBJVn43
+        t05UQIxRq54wRo7HbL0JaJBmhlQAT0yYtNbuAFLYHro5AKq5t6kJB8zr9oeomWUnqFzNGzwdwInxzIx/
+        zkuV6ysVOSTAL8tyZoZhqusPsQPgbr8xIySgbAFdQHfMiA5AVAgeSn8sn6IDfhcNT8nYEsuIPk+EAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnInfo.Label" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="&gt;&gt;btnInfo.Name" xml:space="preserve">
+    <value>btnInfo</value>
+  </data>
+  <data name="&gt;&gt;btnInfo.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnInfo.Parent" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;btnInfo.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="groupAction.Label" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="&gt;&gt;groupAction.Name" xml:space="preserve">
+    <value>groupAction</value>
+  </data>
+  <data name="&gt;&gt;groupAction.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.GroupView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;groupAction.Parent" xml:space="preserve">
+    <value>tabTfs</value>
+  </data>
+  <data name="&gt;&gt;groupAction.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnOutputPane.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAGJJREFUOE9j+Pbt239KMNgAJycnsjD1Dfjw/iNODJKPiIj4f+vmbTCN0wAYG8ZH
+        NuD8+QtgNogG8Ul2ATom6AJkcWyY9i5ANwQd094FMDGYOMWxQDAdkIqpZwAlmIEywMAAALg0qLdCNqtu
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnOutputPane.Label" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="&gt;&gt;btnOutputPane.Name" xml:space="preserve">
+    <value>btnOutputPane</value>
+  </data>
+  <data name="&gt;&gt;btnOutputPane.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;btnOutputPane.Parent" xml:space="preserve">
+    <value>groupWindow</value>
+  </data>
+  <data name="&gt;&gt;btnOutputPane.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupWindow.Label" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="&gt;&gt;groupWindow.Name" xml:space="preserve">
+    <value>groupWindow</value>
+  </data>
+  <data name="&gt;&gt;groupWindow.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.GroupView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;groupWindow.Parent" xml:space="preserve">
+    <value>tabTfs</value>
+  </data>
+  <data name="&gt;&gt;groupWindow.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabTfs.Label" xml:space="preserve">
+    <value>TFS</value>
+  </data>
+  <data name="&gt;&gt;tabTfs.Name" xml:space="preserve">
+    <value>tabTfs</value>
+  </data>
+  <data name="&gt;&gt;tabTfs.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.TabView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;TfsRibbon.OfficeMenu.Name" xml:space="preserve">
+    <value>TfsRibbon.OfficeMenu</value>
+  </data>
+  <data name="&gt;&gt;TfsRibbon.OfficeMenu.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.OfficeMenuView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;TfsRibbon.OfficeMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TfsRibbon.OfficeMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TfsRibbon</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.GenericRibbonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

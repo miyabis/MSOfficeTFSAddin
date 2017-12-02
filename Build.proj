@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Publish" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="packages\MSBuild.Extension.Pack.1.8.0\build\net40\MSBuild.Extension.Pack.targets" Condition="Exists('packages\MSBuild.Extension.Pack.1.8.0\build\net40\MSBuild.Extension.Pack.targets')" />
+
+  <PropertyGroup>
+    <ProjLocation>.</ProjLocation>
+    <ExcelPublishLocation>$(ProjLocation)\ExcelTFSAddIn\$(ProjLocationReleaseDir)\bin\Release\app.publish</ExcelPublishLocation>
+    <PowerPointPublishLocation>$(ProjLocation)\PowerPointTFSAddIn\$(ProjLocationReleaseDir)\bin\Release\app.publish</PowerPointPublishLocation>
+    <ProjectPublishLocation>$(ProjLocation)\ProjectTFSAddIn\$(ProjLocationReleaseDir)\bin\Release\app.publish</ProjectPublishLocation>
+    <VisioPublishLocation>$(ProjLocation)\VisioTFSAddIn\$(ProjLocationReleaseDir)\bin\Release\app.publish</VisioPublishLocation>
+    <WordPublishLocation>$(ProjLocation)\WordTFSAddIn\$(ProjLocationReleaseDir)\bin\Release\app.publish</WordPublishLocation>
+    <SetupPublishLocation>$(ProjLocation)\SetupProject\$(ProjLocationReleaseDir)\bin\Release</SetupPublishLocation>
+    <DeploymentFolder>$(ProjLocation)\Publish\</DeploymentFolder>
+    <ExcelPublishVer>1.4.0.0</ExcelPublishVer>
+    <PowerPointPublishVer>1.4.0.0</PowerPointPublishVer>
+    <ProjectPublishVer>1.4.0.0</ProjectPublishVer>
+    <VisioPublishVer>1.4.0.0</VisioPublishVer>
+    <WordPublishVer>1.4.0.0</WordPublishVer>
+  </PropertyGroup>
+
+
+  <Target Name="Publish" DependsOnTargets="Clean">
+    <Message Text="Publish-Build started for build no $(ApplicationRevision)" />
+    <MSBuild Projects="$(ProjLocation)/ExcelTFSAddIn/ExcelTFSAddIn.vbproj" 
+             Properties="Configuration=Release;ApplicationVersion=$(ExcelPublishVer)" Targets="Rebuild;Publish"/>
+    <MSBuild Projects="$(ProjLocation)/PowerPointTFSAddIn/PowerPointTFSAddIn.vbproj" 
+             Properties="Configuration=Release;ApplicationVersion=$(PowerPointPublishVer)" Targets="Rebuild;Publish"/>
+    <MSBuild Projects="$(ProjLocation)/ProjectTFSAddIn/ProjectTFSAddIn.vbproj" 
+             Properties="Configuration=Release;ApplicationVersion=$(ProjectPublishVer)" Targets="Rebuild;Publish"/>
+    <MSBuild Projects="$(ProjLocation)/VisioTFSAddIn/VisioTFSAddIn.vbproj" 
+             Properties="Configuration=Release;ApplicationVersion=$(VisioPublishVer)" Targets="Rebuild;Publish"/>
+    <MSBuild Projects="$(ProjLocation)/WordTFSAddIn/WordTFSAddIn.vbproj" 
+             Properties="Configuration=Release;ApplicationVersion=$(WordPublishVer)" Targets="Rebuild;Publish"/>
+    <MSBuild Projects="$(ProjLocation)/SetupProject/SetupProject.wixproj" 
+             Properties="Configuration=Release" Targets="build"/>
+
+    <!--
+    -->
+    <ItemGroup>
+      <SchoolPlannerSetupFiles Include="$(ExcelPublishLocation)\*.*"/>
+      <SchoolPlannerSetupFiles Include="$(PowerPointPublishLocation)\*.*"/>
+      <SchoolPlannerSetupFiles Include="$(ProjectPublishLocation)\*.*"/>
+      <SchoolPlannerSetupFiles Include="$(VisioPublishLocation)\*.*"/>
+      <SchoolPlannerSetupFiles Include="$(WordPublishLocation)\*.*"/>
+      <SchoolPlannerUpdateFiles Include="$(ExcelPublishLocation)\Application Files\**\*.*"/>
+      <SchoolPlannerUpdateFiles Include="$(PowerPointPublishLocation)\Application Files\**\*.*"/>
+      <SchoolPlannerUpdateFiles Include="$(ProjectPublishLocation)\Application Files\**\*.*"/>
+      <SchoolPlannerUpdateFiles Include="$(VisioPublishLocation)\Application Files\**\*.*"/>
+      <SchoolPlannerUpdateFiles Include="$(WordPublishLocation)\Application Files\**\*.*"/>
+      <SetupEnFiles Include="$(SetupPublishLocation)\**\en-US\*.msi"/>	
+      <SetupJaFiles Include="$(SetupPublishLocation)\**\ja-JP\*.msi"/>	
+    </ItemGroup>
+    <Copy
+        SourceFiles="@(SchoolPlannerSetupFiles)"
+        DestinationFolder="$(DeploymentFolder)\"
+        />
+    <Copy
+        SourceFiles="@(SchoolPlannerUpdateFiles)"
+        DestinationFolder="$(DeploymentFolder)\Application Files\%(RecursiveDir)"
+        />
+
+    <ItemGroup>
+      <!--<ExcelPublishFiles Include="$(ExcelPublishLocation)\**\*.*"/>
+      <PowerPointPublishFiles Include="$(PowerPointPublishLocation)\**\*.*"/>
+      <ProjectPublishFiles Include="$(ProjectPublishLocation)\**\*.*"/>
+      <VisioPublishFiles Include="$(VisioPublishLocation)\**\*.*"/>
+      <WordPublishFiles Include="$(WordPublishLocation)\**\*.*"/>-->
+      <MSOfficePlublishFiles Include="$(DeploymentFolder)\**\*.*" />
+    </ItemGroup>
+    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" 
+                                           CompressFiles="@(MSOfficePlublishFiles);" 
+                                           RemoveRoot="$(DeploymentFolder)" 
+                                           ZipFileName="$(DeploymentFolder)\MSOfficeTFSAddIn.zip"/>
+    <!--<MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressFiles="@(ExcelPublishFiles)" RemoveRoot="$(ExcelPublishLocation)" ZipFileName="$(DeploymentFolder)\ExcelTFSAddIn.zip"/>
+    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressFiles="@(PowerPointPublishFiles)" RemoveRoot="$(PowerPointPublishLocation)" ZipFileName="$(DeploymentFolder)\PowerPointTFSAddIn.zip"/>
+    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressFiles="@(ProjectPublishFiles)" RemoveRoot="$(ProjectPublishLocation)" ZipFileName="$(DeploymentFolder)\ProjectTFSAddIn.zip"/>
+    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressFiles="@(VisioPublishFiles)" RemoveRoot="$(VisioPublishLocation)" ZipFileName="$(DeploymentFolder)\VisioTFSAddIn.zip"/>
+    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressFiles="@(WordPublishFiles)" RemoveRoot="$(WordPublishLocation)" ZipFileName="$(DeploymentFolder)\WordTFSAddIn.zip"/>-->
+    <Copy
+        SourceFiles="@(SetupEnFiles)"
+        DestinationFiles="$(DeploymentFolder)%(Filename)_en%(Extension)"
+        />
+    <Copy
+        SourceFiles="@(SetupJaFiles)"
+        DestinationFiles="$(DeploymentFolder)%(Filename)_ja%(Extension)"
+        />
+  </Target>
+
+  <Target Name="Clean" Condition=" Exists('$(DeploymentFolder)') ">
+    <Message Text="Clean project:" />
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="RemoveContent" Path="$(DeploymentFolder)"/>
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="RemoveContent" Path="$(ExcelPublishLocation)" ContinueOnError="true" />
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="RemoveContent" Path="$(PowerPointPublishLocation)" ContinueOnError="true" />
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="RemoveContent" Path="$(ProjectPublishLocation)" ContinueOnError="true" />
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="RemoveContent" Path="$(VisioPublishLocation)" ContinueOnError="true" />
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="RemoveContent" Path="$(WordPublishLocation)" ContinueOnError="true" />
+    <MSBuild Projects="$(ProjLocation)/ExcelTFSAddIn/ExcelTFSAddIn.vbproj" Properties="Configuration=Release" Targets="Clean"/>
+    <MSBuild Projects="$(ProjLocation)/PowerPointTFSAddIn/PowerPointTFSAddIn.vbproj" Properties="Configuration=Release" Targets="Clean"/>
+    <MSBuild Projects="$(ProjLocation)/ProjectTFSAddIn/ProjectTFSAddIn.vbproj" Properties="Configuration=Release" Targets="Clean"/>
+    <MSBuild Projects="$(ProjLocation)/VisioTFSAddIn/VisioTFSAddIn.vbproj" Properties="Configuration=Release" Targets="Clean"/>
+    <MSBuild Projects="$(ProjLocation)/WordTFSAddIn/WordTFSAddIn.vbproj" Properties="Configuration=Release" Targets="Clean"/>
+    <MSBuild Projects="$(ProjLocation)/SetupProject/SetupProject.wixproj" Properties="Configuration=Release" Targets="Clean"/>
+  </Target>
+</Project>

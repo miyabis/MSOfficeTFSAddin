@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+
+  <?define ProductName = "MiYABiS MS Office TFS Addin"?>
+  <?define ProductCode = "A4B1380B-2730-44D3-A2FE-AEE9AD23A65B"?>
+  <?define UpgradeCode = "9f5439f3-3cce-4252-80bc-9bf2ebb6a428"?>
+  <?define ProductVersion = "1.2.0.0"?>
+  <?define Manufacturer = "MiYABiS"?>
+
+  <Product Id="$(var.ProductCode)"
+              Name="$(var.ProductName)"
+              Language="1033"
+              Version="$(var.ProductVersion)"
+              Manufacturer="$(var.Manufacturer)"
+              UpgradeCode="$(var.UpgradeCode)">
+
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+    <Property Id="VSTORUNTIMEREDIST">
+      <RegistrySearch
+        Id="VSTORuntimeRedist"
+        Root="HKLM"
+        Key="SOFTWARE\Microsoft\VSTO Runtime Setup\v4R"
+        Name="Version"
+        Type="raw" />
+    </Property>
+    <Condition
+      Message="The Visual Studio 2010 Tools for Office Runtime is not installed. 
+  Please download and install from https://www.microsoft.com/en-US/download/details.aspx?id=48217.">
+      <![CDATA[Installed OR VSTORUNTIMEREDIST>="10.0.30319"]]>
+    </Condition>
+
+    <!--<PropertyRef Id="NETFRAMEWORK40FULL"/>
+    <PropertyRef Id="NETFRAMEWORK45"/>
+
+    <Condition Message='This setup requires Microsoft .NET Framework 4.0 Full package or greater needs to be installed for this installation to continue.'>
+      <![CDATA[Installed OR NETFRAMEWORK40FULL]]>
+    </Condition>
+    <Condition Message='This setup requires Microsoft .NET Framework 4.5 package or greater needs to be installed for this installation to continue.'>
+      <![CDATA[Installed OR NETFRAMEWORK45]]>
+    </Condition>-->
+    <PropertyRef Id="NETFRAMEWORK45"/>
+    <Condition
+      Message="This application requires .NET Framework 4.5.2. Please install the .NET Framework then run this installer again.">
+      <![CDATA[Installed OR NETFRAMEWORK45>="#379893"]]>
+    </Condition>
+
+    <!--<PropertyRef Id="NETFRAMEWORK46"/>
+    <Condition Message="The required Microsoft .NET Framework 4.6 components are missing on this computer. Please run .NET Framework 4.6 (Web Installer) from Microsoft Download Center and then run this installer again.">
+      <![CDATA[Installed OR NETFRAMEWORK46]]>
+    </Condition>-->
+
+    <Media Id="1" Cabinet="MSOfficeTFSAddIn.cab" EmbedCab="yes"/>
+
+    <Feature Id="ProductFeature" Title="MiYABiS MS Office TFS Addin" Level="1">
+      <ComponentGroupRef Id="ExcelComponents" />
+      <ComponentGroupRef Id="ExcelComponents_ja" />
+      <ComponentGroupRef Id="PowerPointComponents" />
+      <ComponentGroupRef Id="PowerPointComponents_ja" />
+      <ComponentGroupRef Id="ProjectComponents" />
+      <ComponentGroupRef Id="ProjectComponents_ja" />
+      <ComponentGroupRef Id="VisioComponents" />
+      <ComponentGroupRef Id="VisioComponents_ja" />
+      <ComponentGroupRef Id="WordComponents" />
+      <ComponentGroupRef Id="WordComponents_ja" />
+      <ComponentGroupRef Id="CommonComponents" />
+      <ComponentGroupRef Id="CommonComponents_ja" />
+      <ComponentGroupRef Id="ExtComponents" />
+
+      <ComponentRef Id="Registry_FriendlyNameX" />
+      <ComponentRef Id="Registry_DescriptionX" />
+      <ComponentRef Id="Registry_ManifestX" />
+      <ComponentRef Id="Registry_LoadBehaviorX" />
+
+      <ComponentRef Id="Registry_FriendlyNamePp" />
+      <ComponentRef Id="Registry_DescriptionPp" />
+      <ComponentRef Id="Registry_ManifestPp" />
+      <ComponentRef Id="Registry_LoadBehaviorPp" />
+
+      <ComponentRef Id="Registry_FriendlyNamePj" />
+      <ComponentRef Id="Registry_DescriptionPj" />
+      <ComponentRef Id="Registry_ManifestPj" />
+      <ComponentRef Id="Registry_LoadBehaviorPj" />
+
+      <ComponentRef Id="Registry_FriendlyNameV" />
+      <ComponentRef Id="Registry_DescriptionV" />
+      <ComponentRef Id="Registry_ManifestV" />
+      <ComponentRef Id="Registry_LoadBehaviorV" />
+
+      <ComponentRef Id="Registry_FriendlyNameW" />
+      <ComponentRef Id="Registry_DescriptionW" />
+      <ComponentRef Id="Registry_ManifestW" />
+      <ComponentRef Id="Registry_LoadBehaviorW" />
+    </Feature>
+
+    <!--<UIRef Id="WixUI_Minimal" />-->
+    <UIRef Id="WixUI_MinimalNoUla" />
+
+    <WixVariable Id="WixUILicenseRtf" Value="..\License.rtf" />
+  </Product>
+
+  <Fragment>
+    <UI Id="WixUI_MinimalNoUla">
+      <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+      <TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+      <Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+      <Property Id="WixUI_Mode" Value="Minimal" />
+
+      <DialogRef Id="ErrorDlg" />
+      <DialogRef Id="FatalError" />
+      <DialogRef Id="FilesInUse" />
+      <DialogRef Id="MsiRMFilesInUse" />
+      <DialogRef Id="PrepareDlg" />
+      <DialogRef Id="ProgressDlg" />
+      <DialogRef Id="ResumeDlg" />
+      <DialogRef Id="UserExit" />
+      <DialogRef Id="WelcomeDlg" />
+
+      <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+
+      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+
+      <Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+
+      <Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">1</Publish>
+
+      <Property Id="ARPNOMODIFY" Value="1" />
+    </UI>
+
+    <UIRef Id="WixUI_Common" />
+  </Fragment>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="ManufacturerFolder" Name="MiYABiS">
+          <Directory Id="INSTALLFOLDER" Name="MSOfficeTFSAddin">
+            <Directory Id="INSTALLFOLDER_JA" Name="ja" />
+          </Directory>
+          <Component Id="Registry_FriendlyNameX">
+            <RegistryValue Id="RegKey_FriendlyNameX" Root="HKCU"
+                           Key="Software\Microsoft\Office\Excel\AddIns\ExcelTFSAddin"
+                           Name="FriendlyName"
+                           Value="MiYABiS Excel TFS Addin"
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_FriendlyNamePp">
+            <RegistryValue Id="RegKey_FriendlyNamePp" Root="HKCU"
+                           Key="Software\Microsoft\Office\PowerPoint\AddIns\PowerPointTFSAddin"
+                           Name="FriendlyName"
+                           Value="MiYABiS PowerPoint TFSAddin TFS Addin"
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_FriendlyNamePj">
+            <RegistryValue Id="RegKey_FriendlyNamePj" Root="HKCU"
+                           Key="Software\Microsoft\Office\MS Project\AddIns\ProjectTFSAddin"
+                           Name="FriendlyName"
+                           Value="MiYABiS Project TFSAddin TFS Addin"
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_FriendlyNameV">
+            <RegistryValue Id="RegKey_FriendlyNameV" Root="HKCU"
+                           Key="Software\Microsoft\Visio\AddIns\VisioTFSAddin"
+                           Name="FriendlyName"
+                           Value="MiYABiS Visio TFSAddin TFS Addin"
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_FriendlyNameW">
+            <RegistryValue Id="RegKey_FriendlyNameW" Root="HKCU"
+                           Key="Software\Microsoft\Office\Word\AddIns\WordTFSAddin"
+                           Name="FriendlyName"
+                           Value="MiYABiS Word TFSAddin TFS Addin"
+                           Type="string" KeyPath="yes" />
+          </Component>
+
+          <Component Id="Registry_DescriptionX">
+            <RegistryValue Id="RegKey_DescriptionX" Root="HKCU"
+                           Key="Software\Microsoft\Office\Excel\AddIns\ExcelTFSAddin"
+                           Name="Description"
+                           Value="Microsoft Office Excel add-ins that assist document version control."
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_DescriptionPp">
+            <RegistryValue Id="RegKey_DescriptionPp" Root="HKCU"
+                           Key="Software\Microsoft\Office\PowerPoint\AddIns\PowerPointTFSAddin"
+                           Name="Description"
+                           Value="Microsoft Office PowerPoint add-ins that assist document version control."
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_DescriptionPj">
+            <RegistryValue Id="RegKey_DescriptionPj" Root="HKCU"
+                           Key="Software\Microsoft\Office\MS Project\AddIns\ProjectTFSAddin"
+                           Name="Description"
+                           Value="Microsoft Project add-ins that assist document version control."
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_DescriptionV">
+            <RegistryValue Id="RegKey_DescriptionV" Root="HKCU"
+                           Key="Software\Microsoft\Visio\AddIns\VisioTFSAddin"
+                           Name="Description"
+                           Value="Microsoft Visio add-ins that assist document version control."
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_DescriptionW">
+            <RegistryValue Id="RegKey_DescriptionW" Root="HKCU"
+                           Key="Software\Microsoft\Office\Word\AddIns\WordTFSAddin"
+                           Name="Description"
+                           Value="Microsoft Office Word add-ins that assist document version control."
+                           Type="string" KeyPath="yes" />
+          </Component>
+
+          <Component Id="Registry_ManifestX">
+            <RegistryValue Id="RegKey_ManifestX" Root="HKCU"
+                           Key="Software\Microsoft\Office\Excel\AddIns\ExcelTFSAddin"
+                           Name="Manifest" Value="[INSTALLFOLDER]ExcelTFSAddIn.vsto|vstolocal"
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_ManifestPp">
+            <RegistryValue Id="RegKey_ManifestPp" Root="HKCU"
+                           Key="Software\Microsoft\Office\PowerPoint\AddIns\PowerPointTFSAddin"
+                           Name="Manifest" Value="[INSTALLFOLDER]PowerPointTFSAddIn.vsto|vstolocal"
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_ManifestPj">
+            <RegistryValue Id="RegKey_ManifestPj" Root="HKCU"
+                           Key="Software\Microsoft\Office\MS Project\AddIns\ProjectTFSAddin"
+                           Name="Manifest" Value="[INSTALLFOLDER]ProjectTFSAddIn.vsto|vstolocal"
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_ManifestV">
+            <RegistryValue Id="RegKey_ManifestV" Root="HKCU"
+                           Key="Software\Microsoft\Visio\AddIns\VisioTFSAddin"
+                           Name="Manifest" Value="[INSTALLFOLDER]VisioTFSAddIn.vsto|vstolocal"
+                           Type="string" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_ManifestW">
+            <RegistryValue Id="RegKey_ManifestW" Root="HKCU"
+                           Key="Software\Microsoft\Office\Word\AddIns\WordTFSAddin"
+                           Name="Manifest" Value="[INSTALLFOLDER]WordTFSAddIn.vsto|vstolocal"
+                           Type="string" KeyPath="yes" />
+          </Component>
+
+          <Component Id="Registry_LoadBehaviorX">
+            <RegistryValue Id="RegKey_LoadBehaviorX" Root="HKCU"
+                           Key="Software\Microsoft\Office\Excel\AddIns\ExcelTFSAddin"
+                           Name="LoadBehavior" Value="3"
+                           Type="integer" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_LoadBehaviorPp">
+            <RegistryValue Id="RegKey_LoadBehaviorPp" Root="HKCU"
+                           Key="Software\Microsoft\Office\PowerPoint\AddIns\PowerPointTFSAddin"
+                           Name="LoadBehavior" Value="3"
+                           Type="integer" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_LoadBehaviorPj">
+            <RegistryValue Id="RegKey_LoadBehaviorPj" Root="HKCU"
+                           Key="Software\Microsoft\Office\MS Project\AddIns\ProjectTFSAddin"
+                           Name="LoadBehavior" Value="3"
+                           Type="integer" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_LoadBehaviorV">
+            <RegistryValue Id="RegKey_LoadBehaviorV" Root="HKCU"
+                           Key="Software\Microsoft\Visio\AddIns\VisioTFSAddin"
+                           Name="LoadBehavior" Value="3"
+                           Type="integer" KeyPath="yes" />
+          </Component>
+          <Component Id="Registry_LoadBehaviorW">
+            <RegistryValue Id="RegKey_LoadBehaviorW" Root="HKCU"
+                           Key="Software\Microsoft\Office\Word\AddIns\WordTFSAddin"
+                           Name="LoadBehavior" Value="3"
+                           Type="integer" KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ExtComponents" Directory="INSTALLFOLDER">
+      <Component Id="MSOfficeToolsCommon_dll_Component">
+        <File Id="MSOfficeToolsCommon_dll" KeyPath="yes"
+              Name="Microsoft.Office.Tools.Common.dll" Source="$(var.XFiles)"></File>
+      </Component>
+      <Component Id="MSOfficeToolsCommon_v40_dll_Component">
+        <File Id="MSOfficeToolsCommon_v40_dll" KeyPath="yes"
+              Name="Microsoft.Office.Tools.Common.v4.0.Utilities.dll" Source="$(var.XFiles)"></File>
+      </Component>
+      <Component Id="MSOfficeTools_dll_Component">
+        <File Id="MSOfficeTools_dll" KeyPath="yes"
+              Name="Microsoft.Office.Tools.dll" Source="$(var.XFiles)"></File>
+      </Component>
+      <Component Id="MSOfficeToolsExcel_dll_Component">
+        <File Id="MSOfficeToolsExcel_dll" KeyPath="yes"
+              Name="Microsoft.Office.Tools.Excel.dll" Source="$(var.XFiles)"></File>
+      </Component>
+      <Component Id="MSOfficeToolsFramework_v40_dll_Component">
+        <File Id="MSOfficeToolsFramework_v40_dll" KeyPath="yes"
+              Name="Microsoft.Office.Tools.v4.0.Framework.dll" Source="$(var.XFiles)"></File>
+      </Component>
+      <Component Id="MSOfficeToolsAppRuntime_dll_Component">
+        <File Id="MSOfficeToolsAppRuntime_dll" KeyPath="yes"
+              Name="Microsoft.VisualStudio.Tools.Applications.Runtime.dll" Source="$(var.XFiles)"></File>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="CommonComponents" Directory="INSTALLFOLDER">
+      <Component Id="TfCommand_dll_Component" >
+        <File Id="TfCommand_dll" KeyPath="yes"
+              Name="TfCommand.dll" Source="$(var.XFiles)" />
+      </Component>
+      <Component Id="TortoiseProcCommand_dll_Component" >
+        <File Id="TortoiseProcCommand_dll" KeyPath="yes"
+              Name="TortoiseProcCommand.dll" Source="$(var.XFiles)" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="CommonComponents_ja" Directory="INSTALLFOLDER_JA">
+      <Component Id="TfCommandJa_dll_Component">
+        <File Id="TfCommandJa_dll" KeyPath="yes"
+              Name="TfCommand.resources.dll" Source="$(var.XFiles)ja\" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ExcelComponents" Directory="INSTALLFOLDER">
+      <Component Id="ExcelTFSAddIn_dll_Component" >
+        <File Id="ExcelTFSAddIn_dll" KeyPath="yes"
+              Name="ExcelTFSAddIn.dll" Source="$(var.XFiles)" />
+      </Component>
+      <Component Id="ExcelTFSAddIn_dll_manifest_Component">
+        <File Id="ExcelTFSAddIn_dll_manifest" KeyPath="yes"
+              Name="ExcelTFSAddIn.dll.manifest" Source="$(var.XFiles)"></File>
+      </Component>
+      <Component Id="ExcelTFSAddIn_vsto_Component">
+        <File Id="ExcelTFSAddIn_vsto" KeyPath="yes"
+              Name="ExcelTFSAddIn.vsto" Source="$(var.XFiles)"></File>
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="ExcelComponents_ja" Directory="INSTALLFOLDER_JA">
+      <Component Id="ExcelTFSAddInJa_dll_Component">
+        <File Id="ExcelTFSAddInJa_dll" KeyPath="yes"
+              Name="ExcelTFSAddIn.resources.dll" Source="$(var.XFiles)ja\" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="PowerPointComponents" Directory="INSTALLFOLDER">
+      <Component Id="PowerPointTFSAddIn_dll_Component" >
+        <File Id="PowerPointTFSAddIn_dll" KeyPath="yes"
+              Name="PowerPointTFSAddIn.dll" Source="$(var.PpFiles)" />
+      </Component>
+      <Component Id="PowerPointTFSAddIn_dll_manifest_Component">
+        <File Id="PowerPointTFSAddIn_dll_manifest" KeyPath="yes"
+              Name="PowerPointTFSAddIn.dll.manifest" Source="$(var.PpFiles)"></File>
+      </Component>
+      <Component Id="PowerPointTFSAddIn_vsto_Component">
+        <File Id="PowerPointTFSAddIn_vsto" KeyPath="yes"
+              Name="PowerPointTFSAddIn.vsto" Source="$(var.PpFiles)"></File>
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="PowerPointComponents_ja" Directory="INSTALLFOLDER_JA">
+      <Component Id="PowerPointTFSAddInJa_dll_Component">
+        <File Id="PowerPointTFSAddInJa_dll" KeyPath="yes"
+              Name="PowerPointTFSAddIn.resources.dll" Source="$(var.PpFiles)ja\" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProjectComponents" Directory="INSTALLFOLDER">
+      <Component Id="ProjectTFSAddIn_dll_Component" >
+        <File Id="ProjectTFSAddIn_dll" KeyPath="yes"
+              Name="ProjectTFSAddIn.dll" Source="$(var.PjFiles)" />
+      </Component>
+      <Component Id="ProjectTFSAddIn_dll_manifest_Component">
+        <File Id="ProjectTFSAddIn_dll_manifest" KeyPath="yes"
+              Name="ProjectTFSAddIn.dll.manifest" Source="$(var.PjFiles)"></File>
+      </Component>
+      <Component Id="ProjectTFSAddIn_vsto_Component">
+        <File Id="ProjectTFSAddIn_vsto" KeyPath="yes"
+              Name="ProjectTFSAddIn.vsto" Source="$(var.PjFiles)"></File>
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="ProjectComponents_ja" Directory="INSTALLFOLDER_JA">
+      <Component Id="ProjectTFSAddInJa_dll_Component">
+        <File Id="ProjectTFSAddInJa_dll" KeyPath="yes"
+              Name="ProjectTFSAddIn.resources.dll" Source="$(var.PjFiles)ja\" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="VisioComponents" Directory="INSTALLFOLDER">
+      <Component Id="VisioTFSAddIn_dll_Component" >
+        <File Id="VisioTFSAddIn_dll" KeyPath="yes"
+              Name="VisioTFSAddIn.dll" Source="$(var.VFiles)" />
+      </Component>
+      <Component Id="VisioTFSAddIn_dll_manifest_Component">
+        <File Id="VisioTFSAddIn_dll_manifest" KeyPath="yes"
+              Name="VisioTFSAddIn.dll.manifest" Source="$(var.VFiles)"></File>
+      </Component>
+      <Component Id="VisioTFSAddIn_vsto_Component">
+        <File Id="VisioTFSAddIn_vsto" KeyPath="yes"
+              Name="VisioTFSAddIn.vsto" Source="$(var.VFiles)"></File>
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="VisioComponents_ja" Directory="INSTALLFOLDER_JA">
+      <Component Id="VisioTFSAddInJa_dll_Component">
+        <File Id="VisioTFSAddInJa_dll" KeyPath="yes"
+              Name="VisioTFSAddIn.resources.dll" Source="$(var.VFiles)ja\" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="WordComponents" Directory="INSTALLFOLDER">
+      <Component Id="WordTFSAddIn_dll_Component" >
+        <File Id="WordTFSAddIn_dll" KeyPath="yes"
+              Name="WordTFSAddIn.dll" Source="$(var.WFiles)" />
+      </Component>
+      <Component Id="WordTFSAddIn_dll_manifest_Component">
+        <File Id="WordTFSAddIn_dll_manifest" KeyPath="yes"
+              Name="WordTFSAddIn.dll.manifest" Source="$(var.WFiles)"></File>
+      </Component>
+      <Component Id="WordTFSAddIn_vsto_Component">
+        <File Id="WordTFSAddIn_vsto" KeyPath="yes"
+              Name="WordTFSAddIn.vsto" Source="$(var.WFiles)"></File>
+      </Component>
+    </ComponentGroup>
+
+    <ComponentGroup Id="WordComponents_ja" Directory="INSTALLFOLDER_JA">
+      <Component Id="WordTFSAddInJa_dll_Component">
+        <File Id="WordTFSAddInJa_dll" KeyPath="yes"
+              Name="WordTFSAddIn.resources.dll" Source="$(var.WFiles)ja\" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
