@@ -49,16 +49,22 @@ When not under control, only menus other than TFS operation are displayed.
 
 ## Office Application Supports
 
-* Excel : 2013, 2010
-* Word : 2013, 2010 
-* PowerPoint : 2013, 2010
-* Project : 2013, 2010
-* Visio : 2013, 2010
+|  | 2016 | 2013 | 2010 |
+|---|---|---|---|
+| Excel | O | O | O | 
+| Word | O | O | O  | 
+| PowerPoint | O | O | O | 
+| Project | *1 | O | O | 
+| Visio | *1 | O | O |
+
+*1 : can not confirm the operation
 
 ## TF.exe Supports
 
-* Visual Studio : 2015, 2013, 2012, 2010
-* Team Explorer : 2015, 2013, 2012, 2010
+| | 2017 | 2015 | 2013 | 2012 | 2010 |
+|---|---|---|---|---|---|
+| Visual Studio | | O | O | O | O |
+| Team Explorer | | O | O | O | O |
 
 ## Language Supports
 
