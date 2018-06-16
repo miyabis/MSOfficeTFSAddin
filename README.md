@@ -5,7 +5,7 @@ You can invoke TF.exe ([TFS version control command line tool TF.exe](https://ms
 In addition, we have also added the function to export VBA code.
 The "Copy and resolve conflict" menu can be compared using Excel, Word using [TortoiseSVN](https://tortoisesvn.net/) or [TortoiseGit](https://tortoisegit.org/) if TortoiseSVN or TortoiseGit is already installed.
 
-For Japanese documents, please click [here](README.ja.md).
+日本語のドキュメントは [こちら](README.ja.md)。
 
 ## TFS Ribbon Tab Menu
 
@@ -49,22 +49,22 @@ When not under control, only menus other than TFS operation are displayed.
 
 ## Office Application Supports
 
-|  | 2016 | 2013 | 2010 |
-|---|---|---|---|
-| Excel | O | O | O | 
-| Word | O | O | O  | 
-| PowerPoint | O | O | O | 
-| Project | *1 | O | O | 
-| Visio | *1 | O | O |
+|            | 2016 | 2013 | 2010 |
+|------------|:----:|:----:|:----:|
+| Excel      | O    | O    | O    | 
+| Word       | O    | O    | O    | 
+| PowerPoint | O    | O    | O    | 
+| Project    | *1   | O    | O    | 
+| Visio      | *1   | O    | O    |
 
 *1 : can not confirm the operation
 
 ## TF.exe Supports
 
-| | 2017 | 2015 | 2013 | 2012 | 2010 |
-|---|---|---|---|---|---|
-| Visual Studio | | O | O | O | O |
-| Team Explorer | | O | O | O | O |
+|               | 2017 | 2015 | 2013 | 2012 | 2010 |
+|---------------|:----:|:----:|:----:|:----:|:----:|
+| Visual Studio | O    | O    | O    | O    | O    |
+| Team Explorer | O    | O    | O    | O    | O    |
 
 ## Language Supports
 

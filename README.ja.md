@@ -45,22 +45,22 @@ Excel や Word 等の Office 系文書を TFS でソース管理している場�
 
 ## 動作する Office アプリケーション
 
-|  | 2016 | 2013 | 2010 |
-|---|---|---|---|
-| Excel | O | O | O | 
-| Word | O | O | O  | 
-| PowerPoint | O | O | O | 
-| Project | *1 | O | O | 
-| Visio | *1 | O | O |
+|            | 2016 | 2013 | 2010 |
+|------------|:----:|:----:|:----:|
+| Excel      | O    | O    | O    | 
+| Word       | O    | O    | O    | 
+| PowerPoint | O    | O    | O    | 
+| Project    | *1   | O    | O    | 
+| Visio      | *1   | O    | O    |
 
 *1 : can not confirm the operation
 
 ## 動作する TF.exe 
 
-| | 2017 | 2015 | 2013 | 2012 | 2010 |
-|---|---|---|---|---|---|
-| Visual Studio | | O | O | O | O |
-| Team Explorer | | O | O | O | O |
+|               | 2017 | 2015 | 2013 | 2012 | 2010 |
+|---------------|:----:|:----:|:----:|:----:|:----:|
+| Visual Studio | O    | O    | O    | O    | O    |
+| Team Explorer | O    | O    | O    | O    | O    |
 
 ## 言語
 
