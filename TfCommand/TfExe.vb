@@ -13,6 +13,8 @@ Public Class TfExe
 
 #Region " Declare "
 
+    Const C_TFEXE As String = "TF.exe"
+
     Private _vsversion As Integer
 
     Private tfExePath As String
@@ -375,9 +377,66 @@ Public Class TfExe
     End Function
 
     Private Sub _init()
-        Const C_TFEXE As String = "TF.exe"
-        Const C_VALUE As String = "InstallDir"
+
+        _searchTF2017()
+        _searchTFNo2017()
+
+        If String.IsNullOrEmpty(tfExePath) Then
+            Return
+        End If
+
+        tfExeInfo = New ProcessStartInfo()
+        tfExeInfo.LoadUserProfile = True
+        tfExeInfo.UseShellExecute = False
+        tfExeInfo.CreateNoWindow = True
+        tfExeInfo.RedirectStandardError = True
+        tfExeInfo.RedirectStandardOutput = True
+        tfExeInfo.FileName = tfExePath
+    End Sub
+
+    Private Sub _searchTF2017()
+        Const devenvPath As String = "Common7\IDE\"
+        Const tfPath As String = "CommonExtensions\Microsoft\TeamFoundation\Team Explorer\"
+        Dim vswhere As String
+        Dim vswhereOpt As String
+        Dim vsPath As String
+        Dim ps As New Process
+
+        vswhere = Environment.ExpandEnvironmentVariables("%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe")
+        If Not File.Exists(vswhere) Then
+            Return
+        End If
+
+        vswhereOpt = "-latest -products * -property installationPath"
+        ps.StartInfo.UseShellExecute = False
+        ps.StartInfo.RedirectStandardOutput = True
+        ps.StartInfo.RedirectStandardInput = False
+        ps.StartInfo.RedirectStandardError = True
+        ps.StartInfo.CreateNoWindow = True
+
+        ps.StartInfo.FileName = vswhere
+        ps.StartInfo.Arguments = vswhereOpt
+        If Not ps.Start() Then
+            Return
+        End If
+
+        vsPath = ps.StandardOutput.ReadToEnd().Replace(vbCrLf, String.Empty)
+        Me.InstallDir = Path.Combine(vsPath, devenvPath)
+        Dim wk As String = Path.Combine(Path.Combine(Me.InstallDir, tfPath), C_TFEXE)
+        If Not File.Exists(wk) Then
+            Return
+        End If
+
+        tfExePath = wk
+    End Sub
+
+    Private Sub _searchTFNo2017()
+        If Not String.IsNullOrEmpty(Me.InstallDir) Then
+            Return
+        End If
+
         Dim vers() As Integer = {14, 12, 11, 10}
+        Const C_VALUE As String = "InstallDir"
         Dim key As RegistryKey = Nothing
         For Each ver As Integer In vers
             key = Registry.CurrentUser.OpenSubKey(String.Format("Software\Microsoft\VisualStudio\{0}.0_Config", ver))
@@ -389,16 +448,9 @@ Public Class TfExe
         If key Is Nothing Then
             Return
         End If
+
         Me.InstallDir = key.GetValue(C_VALUE)
         tfExePath = Path.Combine(Me.InstallDir, C_TFEXE)
-
-        tfExeInfo = New ProcessStartInfo()
-        tfExeInfo.LoadUserProfile = True
-        tfExeInfo.UseShellExecute = False
-        tfExeInfo.CreateNoWindow = True
-        tfExeInfo.RedirectStandardError = True
-        tfExeInfo.RedirectStandardOutput = True
-        tfExeInfo.FileName = tfExePath
     End Sub
 
     Private Function _commandExecute(ByVal args As String) As Boolean
