@@ -248,7 +248,6 @@
     <EmbeddedResource Include="TfsRibbon.resx">
       <DependentUpon>TfsRibbon.vb</DependentUpon>
     </EmbeddedResource>
-    <None Include="TFSAddinKey.pfx" />
     <None Include="Key.snk" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.vb</DependentUpon>
