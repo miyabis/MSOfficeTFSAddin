@@ -77,6 +77,7 @@ Public Class ThisAddIn
 
     Private Sub _afterSave()
         If Me._queueDocs.Count <= 0 Then
+            Thread.Sleep(500)
             Return
         End If
         SyncLock Me._queueDocs
