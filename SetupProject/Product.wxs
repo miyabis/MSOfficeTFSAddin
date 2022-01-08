@@ -3,9 +3,9 @@
      xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
 
   <?define ProductName = "MiYABiS MS Office TFS Addin"?>
-  <?define ProductCode = "99069A66-5896-454D-8D79-22BCFCF4BCBA"?>
+  <?define ProductCode = "121D1B17-78E3-458C-8AC4-AA9E045D69F5"?>
   <?define UpgradeCode = "9f5439f3-3cce-4252-80bc-9bf2ebb6a428"?>
-  <?define ProductVersion = "1.5.0.0"?>
+  <?define ProductVersion = "1.6.0.0"?>
   <?define Manufacturer = "MiYABiS"?>
 
   <Product Id="$(var.ProductCode)"
@@ -15,7 +15,11 @@
               Manufacturer="$(var.Manufacturer)"
               UpgradeCode="$(var.UpgradeCode)">
 
-    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Package InstallerVersion="200" 
+			 Compressed="yes" 
+			 Manufacturer="$(var.Manufacturer)"
+			 Description="Installs $(var.ProductName)"
+			 InstallScope="perMachine" />
 
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 

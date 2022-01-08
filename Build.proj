@@ -12,11 +12,11 @@
     <WordPublishLocation>$(ProjLocation)\WordTFSAddIn\$(ProjLocationReleaseDir)\bin\Release\app.publish</WordPublishLocation>
     <SetupPublishLocation>$(ProjLocation)\SetupProject\$(ProjLocationReleaseDir)\bin\Release</SetupPublishLocation>
     <DeploymentFolder>$(ProjLocation)\Publish\</DeploymentFolder>
-    <ExcelPublishVer>1.5.0.0</ExcelPublishVer>
-    <PowerPointPublishVer>1.5.0.0</PowerPointPublishVer>
-    <ProjectPublishVer>1.5.0.0</ProjectPublishVer>
-    <VisioPublishVer>1.5.0.0</VisioPublishVer>
-    <WordPublishVer>1.5.0.0</WordPublishVer>
+    <ExcelPublishVer>1.6.0.0</ExcelPublishVer>
+    <PowerPointPublishVer>1.6.0.0</PowerPointPublishVer>
+    <ProjectPublishVer>1.6.0.0</ProjectPublishVer>
+    <VisioPublishVer>1.6.0.0</VisioPublishVer>
+    <WordPublishVer>1.6.0.0</WordPublishVer>
   </PropertyGroup>
 
 
