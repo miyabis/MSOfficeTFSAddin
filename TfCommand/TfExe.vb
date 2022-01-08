@@ -376,6 +376,59 @@ Public Class TfExe
         Return _commandExecute(args.ToString)
     End Function
 
+    ''' <summary>
+    ''' ファイルパスを取得する
+    ''' </summary>
+    ''' <param name="rawWorkbookUrl"></param>
+    ''' <returns>
+    ''' 参考：https://social.msdn.microsoft.com/Forums/office/en-US/1331519b-1dd1-4aa0-8f4f-0453e1647f57/how-to-get-physical-path-instead-of-url-onedrive?forum=officegeneral
+    ''' </returns>
+    Public Function GetLocalPath(rawWorkbookUrl As String) As String
+        If String.IsNullOrEmpty(rawWorkbookUrl) Then
+            Return rawWorkbookUrl
+        End If
+
+        Dim workbookUri As Uri
+        Try
+            workbookUri = New Uri(rawWorkbookUrl)
+        Catch ex As Exception
+            Return rawWorkbookUrl
+        End Try
+        ' ワークブックのパスがローカルファイルを指している場合、それをそのまま返す
+        If workbookUri.IsLoopback Then Return rawWorkbookUrl
+        If workbookUri.IsFile Then Return rawWorkbookUrl
+        'If workbookUri.Scheme.ToLower().StartsWith("http") Then Return rawWorkbookUrl
+
+        ' レジストリキー名
+        Dim keyNames As New Stack(Of String)({"OneDriveCommercial", "OneDrive", "OneDrive"})
+
+        Do ' ファイルが見つかるまで、すべてのキー名をループする
+            Dim keyName = keyNames.Pop
+
+            Using key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Environment", False)
+                Dim rootDirectory = key.GetValue(keyName)?.ToString()
+                If String.IsNullOrEmpty(rootDirectory) = False AndAlso System.IO.Directory.Exists(rootDirectory) Then
+
+                    ' パス部分からなるキューを作成する
+                    Dim pathParts = New Queue(Of String)(workbookUri.LocalPath.Split("/"c).Except({String.Empty}))
+
+                    Do
+                        ' ルートディレクトリとその間のスラッシュを追加してローカルパスを構成する
+                        Dim localPath = String.Join(System.IO.Path.DirectorySeparatorChar, {rootDirectory}.Union(pathParts))
+
+                        If System.IO.File.Exists(localPath) Then Return localPath
+                        If System.IO.Directory.Exists(localPath) Then Return localPath
+
+                        ' ファイルが見つかりません - パスの左端を削除して再試行
+                        pathParts.Dequeue()
+                    Loop Until pathParts.Count = 0
+                End If
+            End Using
+        Loop Until keyNames.Count = 0
+
+        Throw New Exception("Failed to find local path for workbook.")
+    End Function
+
     Private Sub _init()
 
         _searchTF2017()

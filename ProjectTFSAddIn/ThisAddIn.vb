@@ -58,7 +58,8 @@ Public Class ThisAddIn
 
     Public ReadOnly Property FullName As String Implements IDocument.FullName
         Get
-            Return Globals.ThisAddIn.Application.ActiveProject.FullName
+            Dim filename As String = TF.GetLocalPath(Globals.ThisAddIn.Application.ActiveProject.FullName)
+            Return filename
         End Get
     End Property
 

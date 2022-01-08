@@ -575,11 +575,15 @@ Public Class TfsRibbon
 
                 Disable()
 
+                If Wb Is Nothing Then
+                    Return
+                End If
                 Dim visible As Boolean
-                If Wb Is Nothing OrElse String.IsNullOrEmpty(Wb.Path) Then
+                Dim fullName As String = Tf.GetLocalPath(Wb.FullName)
+                Me.Tf.WorkingDirectory = Path.GetDirectoryName(fullName)
+                If String.IsNullOrEmpty(fullName) Then
                     visible = False
                 Else
-                    Me.Tf.WorkingDirectory = Wb.Path
                     visible = Me.Tf.Workfold(Wb.Name)
                 End If
 

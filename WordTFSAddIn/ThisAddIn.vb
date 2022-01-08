@@ -1,4 +1,6 @@
 ﻿
+Imports System.Threading
+
 Public Class ThisAddIn
     Implements IDocument
 
@@ -125,7 +127,8 @@ Public Class ThisAddIn
 
     Public ReadOnly Property FullName As String Implements IDocument.FullName
         Get
-            Return Globals.ThisAddIn.Application.ActiveDocument.FullName
+            Dim filename As String = TF.GetLocalPath(Globals.ThisAddIn.Application.ActiveDocument.FullName)
+            Return filename
         End Get
     End Property
 
