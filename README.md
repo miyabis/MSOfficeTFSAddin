@@ -45,7 +45,7 @@ When not under control, only menus other than TFS operation are displayed.
 
 ## For Use
 
-.Net Framework 4.5.2
+.Net Framework 4.7.2
 
 ## Office Application Supports
 
