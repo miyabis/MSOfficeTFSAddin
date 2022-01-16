@@ -62,7 +62,7 @@ When not under control, only menus other than TFS operation are displayed.
 ## TF.exe Supports
 
 |               | 2022 | 2019 | 2017 | 2015 | 2013 | 2012 | 2010 |
-|---------------|:----:|:----:|:----:|:----:|:----:|:----:|
+|---------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 | Visual Studio | O    | O    | O    | O    | O    | O    | O    |
 | Team Explorer | O    | O    | O    | O    | O    | O    | O    |
 
