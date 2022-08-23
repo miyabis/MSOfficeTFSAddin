@@ -1,0 +1,102 @@
+[33mcommit 2085dc43162b730217fea61442fa0600816bc7df[m[33m ([m[1;36mHEAD -> [m[1;32malikhan.txt[m[33m, [m[1;31morigin/alikhan.txt[m[33m)[m
+Author: unknown <khange221133@gmail.com>
+Date:   Tue Aug 23 16:28:34 2022 +0500
+
+     this is some info is added to it
+
+[33mcommit 749a8d54760acaf65dc5e1a77117f280e3f18c5d[m
+Author: unknown <khange221133@gmail.com>
+Date:   Tue Aug 23 16:26:20 2022 +0500
+
+     this is the creation of file ali.txt
+
+[33mcommit e829fb3e19374329618dfc7388bb8416df0127d5[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: MiYABiS <moka@miyabis.jp>
+Date:   Sun Jan 16 23:54:11 2022 +0900
+
+    Update README.md
+
+[33mcommit 8fb9decc2de386bbca5769a5801bf33b5b8e028e[m
+Author: MiYABiS <moka@miyabis.jp>
+Date:   Sun Jan 16 23:53:45 2022 +0900
+
+    Update README.ja.md
+
+[33mcommit 5257250f526e3671140fe73d20440829be05989d[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Wed Jan 12 22:21:09 2022 +0900
+
+    update readme
+
+[33mcommit 0ba892023d16dd5c9f035816803c8a65fe9f9302[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sat Jan 8 18:41:46 2022 +0900
+
+    update assemblyinfo and build setting
+
+[33mcommit fb4ba1686b285c0c643ba95094ac7bbce05e57b1[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sat Jan 8 16:32:34 2022 +0900
+
+    refs: #6
+
+[33mcommit 44c5c2ad0cb9cc71ac375585d444428df9be4bb9[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sat Jan 8 14:33:02 2022 +0900
+
+    refs: #7
+
+[33mcommit 87136a3f00b2f4449b154da971d880a5ccfa4642[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sat Jan 8 13:26:33 2022 +0900
+
+    refs: #5
+
+[33mcommit c21fb708edcd8f2b6472637bb1c5099e91b39a29[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sun Jun 2 14:14:37 2019 +0900
+
+    refs: #3, #4
+
+[33mcommit 385843084c87eb3e0fef922a2cfbff6029e0ae3e[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sat Jun 16 14:22:09 2018 +0900
+
+    mod readme
+
+[33mcommit 9488da45bee288355cc3f89b1943a69c99ea8239[m
+Merge: a61373d 797aa35
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sat Jun 16 13:51:50 2018 +0900
+
+    Merge branch 'master' of https://github.com/miyabis/MSOfficeTFSAddin
+
+[33mcommit a61373dfd874882941df7cddb6a99ebf47c3b779[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sat Jun 16 13:30:35 2018 +0900
+
+    refs: #1
+
+[33mcommit 797aa358c301bea286fb5df3f9e36452a7663b45[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sat Jun 16 13:30:35 2018 +0900
+
+    refs: #2
+
+[33mcommit c0c3faca262d51f367c8e8ed7123094776235377[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sun Dec 3 03:27:47 2017 +0900
+
+    mod readme
+
+[33mcommit 4f304d733fcbb9a447b8419bcaf3fbec5e8e3ede[m
+Author: MiYABiS <miyabis@live.jp>
+Date:   Sun Dec 3 02:52:52 2017 +0900
+
+    Moved from codeplex
+
+[33mcommit cda1ff49777d9f292fee57c4b91771e873031265[m
+Author: MiYABiS <moka@miyabis.jp>
+Date:   Sat Dec 2 22:18:55 2017 +0900
+
+    Initial commit
